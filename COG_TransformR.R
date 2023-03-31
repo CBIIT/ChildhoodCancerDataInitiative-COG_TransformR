@@ -52,7 +52,7 @@ rm(new.packages)
 #Option list for arg parse
 option_list = list(
   make_option(c("-d", "--directory"), type="character", default=NULL, 
-              help="Model file yaml", metavar="character")
+              help="Directory that contains the COG JSON files.", metavar="character")
 )
 
 
