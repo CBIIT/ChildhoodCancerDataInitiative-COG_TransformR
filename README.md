@@ -17,7 +17,7 @@ This script takes a directory of COG JSON files and transforms them into a table
 
 Options:
 	-d CHARACTER, --directory=CHARACTER
-		Model file yaml
+		directory of yaml files
 
 	-h, --help
 		Show this help message and exit
