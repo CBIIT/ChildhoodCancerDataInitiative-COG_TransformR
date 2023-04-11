@@ -111,7 +111,13 @@ for (json in json_files){
   for (form in forms){
     form_loc=grep(pattern = TRUE,x = df$forms.form_name %in% form)
     df_out=df$forms.data[form_loc][[1]]
-    df_out=mutate(df_out,upi=df$upi[form_loc],date_of_extraction=df$date_of_extraction[form_loc],version=df$version[form_loc],index_date_type=df$index_date_type[form_loc],forms.form_name=df$forms.form_name[form_loc],forms.form_id=df$forms.form_id[form_loc]) 
+    df_out=mutate(df_out,
+                  upi=df$upi[form_loc],
+                  date_of_extraction=df$date_of_extraction[form_loc],
+                  version=df$version[form_loc],
+                  index_date_type=df$index_date_type[form_loc],
+                  forms.form_name=df$forms.form_name[form_loc],
+                  forms.form_id=df$forms.form_id[form_loc]) 
     df_out= mutate(df_out, across(everything(), as.character))
     as.character(df_out)
     df_all=bind_rows(df_all,df_out)
